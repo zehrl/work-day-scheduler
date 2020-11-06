@@ -22,27 +22,44 @@
 <body>
     <header class="jumbotron">
         <h1 class="display-4">Work Day Scheduler</h1>
-        <p class="lead">CURRENT TIME GOES HERE</p>
+        <p class="lead" id="currentDay">CURRENT TIME GOES HERE</p>
     </header>
     <main>
         <!-- Container -->
-        <div class="container">
+        <div class="container calendarParent">
 
             <!-- Calendar Container -->
             <div class="calendarContainer">
-                <span class="time">9am</span>
+                <span class="time" data-hour="19">7pm</span>
                 <form class="scheduleEvent">
                     <input type="text" class="eventInput">
-                    <!-- <input type="submit"> -->
                 </form>
                 <i class="far fa-save icon"></i>
             </div>
 
+            <!-- Calendar Container -->
             <div class="calendarContainer">
-                <span class="time">10am</span>
+                <span class="time" data-hour="20">8pm</span>
                 <form class="scheduleEvent">
                     <input type="text" class="eventInput">
-                    <!-- <input type="submit"> -->
+                </form>
+                <i class="far fa-save icon"></i>
+            </div>
+
+            <!-- Calendar Container -->
+            <div class="calendarContainer">
+                <span class="time" data-hour="21">9pm</span>
+                <form class="scheduleEvent">
+                    <input type="text" class="eventInput">
+                </form>
+                <i class="far fa-save icon"></i>
+            </div>
+
+            <!-- Calendar Container -->
+            <div class="calendarContainer">
+                <span class="time" data-hour="22">10pm</span>
+                <form class="scheduleEvent">
+                    <input type="text" class="eventInput">
                 </form>
                 <i class="far fa-save icon"></i>
             </div>
@@ -59,6 +76,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
+
+    <!-- Moment.js -->
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+
+    <!-- My Scripts -->
+    <script src="scripts/main.js"></script>
+
 </body>
 
 </html>
