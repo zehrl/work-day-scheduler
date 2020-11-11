@@ -1,5 +1,3 @@
-console.log("Hello!")
-
 var calendarBlocksEl = $("#calendarParent > .calendarContainer");
 var eventData = [];
 
@@ -43,22 +41,20 @@ function initializeData() {
                 text
             });
 
-            console.log(hour, text)
-        } 
+        }
 
         localStorage.setItem("eventData", JSON.stringify(eventData));
-    } else {textHistoryUpdate()}
+    } else { textHistoryUpdate() }
 }
 
 // Pull local storage and populate on calendar
 function textHistoryUpdate() {
-    console.log("I found history! Time to update...")
     eventData = JSON.parse(localStorage.getItem("eventData"));
 
     // Set each input to the local storage text
     for (let i = 0; i < calendarBlocksEl.length; i++) {
         $(calendarBlocksEl.get(i)).find(".eventInput").val(eventData[i].text);
-    } 
+    }
 
 }
 
